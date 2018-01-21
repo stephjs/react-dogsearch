@@ -23,7 +23,10 @@ class Searchbar extends Component {
 					placeholder = "Search for a smol doggo!"
 					value = {this.state.searchTerm}
 					onChange={this.onInputChange.bind(this)} />
-				<span className="submitbtn" onClick={this.clickedInput.bind(this)}>Submit!</span>
+				<span className="submitbtn" onClick={this.clickedInput.bind(this)}>
+					<i className="fa fa-paw searchpaw" aria-hidden="true"></i>
+					Submit
+				</span>
 
 			</div>
 		);

@@ -9,7 +9,7 @@ const MainDog = (props) => {
 			<img src={props.mainDog} className="maindogimg"/>
 			<div className="details">
 				<h1 className="title">{props.dogName}</h1>
-				{props.mainDogDetails}
+				<span className="doggoIps">{props.mainDogDetails}</span>
 			</div>
 		</div>
 	);

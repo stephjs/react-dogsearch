@@ -1,3 +1,12 @@
+* {
+	font-family: 'Lato', sans-serif;
+	background: background-color: #ffffff;
+}
+
+body {
+	background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23cce7de' fill-opacity='0.31' fill-rule='evenodd'%3E%3Cpath d='M0 0h35v35H0V0zm5 5h25v25H5V5zm5 5h15v15H10V10zm5 5h5v5h-5v-5zM40 5h25v25H40V5zm5 5h15v15H45V10zm5 5h5v5h-5v-5zM70 35H35v35h35V35zm-5 5H40v25h25V40zm-5 5H45v15h15V45zm-5 5h-5v5h5v-5zM30 40H5v25h25V40zm-5 5H10v15h15V45zm-5 5h-5v5h5v-5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 .search-bar {
 	margin: 0 20px;	
 	text-align: center;
@@ -15,6 +24,7 @@
 	max-height: 80vh;
 	padding: 20px;
     border: 10px solid #000;
+    background: #fff;
 }
 .dog-detail .details {
 	margin-top: 10px;
@@ -33,29 +43,7 @@
 
 .list-group-item {
 	cursor: pointer;
-    margin: 5px auto;
-}
-
-@media (min-width: 1000px) { 
-	.list-group {
-	    padding-left: 0;
-	    margin-bottom: 0;
-	    overflow: scroll;
-	    height: 85vh;
-	}
-	.row {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-	    -webkit-box-align: center;
-	        -ms-flex-align: center;
-	            align-items: center;
-	}
-}
-
-.list-group-item:hover {
-	background: #eee;
-	
+    border: none !important;
 }
 
 .videotitle {
@@ -103,6 +91,20 @@
 
 .dogImg {
     width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 75px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.list-group-item:hover {
+	background: #eee;
+}
+
+.list-group-item:hover .dogImg {
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
 }
 
 .dogoholder {
@@ -117,6 +119,9 @@
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
 .media-heading {
@@ -125,6 +130,7 @@
 
 .title {
     padding: 0 20px 0 0;
+    font-family: 'Risque', cursive;
 }
 
 .search-bar {
@@ -142,4 +148,56 @@
 
 .submitbtn:hover{
 	color: #4ee9b4;
+}
+
+.doggoIps {
+	font-size: 14px;
+}
+.searchpaw {
+	padding-right: 5px;
+}
+
+@media (min-width: 1000px) { 
+	.list-group {
+	    padding-left: 0;
+	    margin-bottom: 0;
+	    overflow: scroll;
+	    height: 85vh;
+	}
+	.row {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
+	}
+	.list-group {
+		border: 1px solid #ccc;
+	}
+}
+
+@media (max-width: 800px) { 
+	.title {
+		font-size: 30px;
+	}
+	.dog-detail {
+		max-height: none;
+	}
+	#doglistmodal {
+	    width: 100%;
+	    margin: 0;
+	    padding: 20px;
+	    font-size: 12px;
+	}
+	.search-bar input {
+	    width: 70%;
+	}
+	.maindogimg {
+		height: 250px;
+	}
+	.dogImg {
+		-webkit-filter: grayscale(0%);
+    	filter: grayscale(0%);
+	}
 }
